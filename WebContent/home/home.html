@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div style="text-align: center">
+		<h4>Welcome {{vm.user.username}}</h4>
+	</div>
+
+	<div style="text-align: center">
+		<!-- Create a binding between the searchString model and the text field -->
+		<input type="text" name="search" id="search" size="55"
+			data-ng-model="vm.search"
+			placeholder="Enter search value name or attribute or email ">
+	</div>&nbsp;
+	<div style="text-align: center"><button class="btn btn-primary"
+		data-ng-click="vm.searchString(vm.search)">Search</button></div>
+	&nbsp;
+
+	<table data-st-table="rowCollection"
+		class="table table-striped table-bordered">
+		<thead>
+
+			<tr>
+				<th>Name</th>
+				<th>Attributes</th>
+				<th>eMail</th>
+
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="user in vm.allUsers ">
+				<td>{{user.displayName}}</td>
+				<td>{{user.attribute}}</td>
+				<td>{{user.email}}</td>
+
+			</tr>
+		</tbody>
+
+	</table>
+
+	<table>
+		<tr>
+			<td><button class="btn btn-primary"
+					data-ng-click="vm.updateDetail()">Edit</button></td>
+			<td><p>&nbsp;</p></td>
+			<td><p>&nbsp;</p></td>
+			<td><p>&nbsp;</p></td>
+			<td><button class="btn btn-primary"
+					data-ng-click="vm.deleteUser()">Delete</button></td>
+		</tr>
+	</table>
+	<p>
+		<a href="#!/login" class="btn btn-primary">Logout</a>
+	</p>
+
+</body>
+</html>
