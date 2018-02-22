@@ -1,0 +1,12 @@
+epita.fr.java.identity.management.authentication
+epita.fr.java.identity.management.common.core
+epita.fr.java.identity.management.constants
+epita.fr.java.identity.management.dao
+epita.fr.java.identity.management.dao.impl
+epita.fr.java.identity.management.database.connection
+epita.fr.java.identity.management.dto
+epita.fr.java.identity.management.exceptions
+epita.fr.java.identity.management.handler
+epita.fr.java.identity.management.handler.impl
+epita.fr.java.identity.management.service
+fr.epita.iam.services.test
